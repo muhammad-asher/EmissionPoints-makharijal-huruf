@@ -10,7 +10,7 @@ import android.widget.Button;
 
 public class ProfileActivity extends AppCompatActivity {
 
- Button buttonrepo;
+ Button buttonrepo,buttonmainactivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,11 +18,21 @@ public class ProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
 
 buttonrepo=(Button) findViewById(R.id.buttonrepo);
+buttonmainactivity=(Button) findViewById(R.id.btnMainActivity);
+
 buttonrepo.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
         openWebPage("https://github.com/muhammad-asher/EmissionPoints-makharijal-huruf.git");
 
+    }
+});
+
+buttonmainactivity.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Intent intent =new Intent(ProfileActivity.this, MainAppActivity.class);
+        startActivity(intent);
     }
 });
 
@@ -32,5 +42,6 @@ buttonrepo.setOnClickListener(new View.OnClickListener() {
     Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
     startActivity(intent);
     }
+
 
 }
