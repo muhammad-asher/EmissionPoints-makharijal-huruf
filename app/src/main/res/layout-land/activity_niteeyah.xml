@@ -10,33 +10,36 @@
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="243dp"
+        android:layout_marginBottom="13dp"
         android:text="Nit-eeyah"
         android:textSize="24sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="383dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintBottom_toTopOf="@+id/imageView10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView10"
-        android:layout_width="732dp"
-        android:layout_height="98dp"
-        app:srcCompat="@drawable/niteyahtable"
-        tools:layout_editor_absoluteX="-2dp"
-        tools:layout_editor_absoluteY="61dp" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        app:srcCompat="@drawable/niteyahtable" />
 
     <ImageView
         android:id="@+id/imageView11"
-        android:layout_width="864dp"
-        android:layout_height="74dp"
-        app:srcCompat="@drawable/niteyahimage"
-        tools:layout_editor_absoluteX="5dp"
-        tools:layout_editor_absoluteY="172dp" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="56dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView10"
+        app:srcCompat="@drawable/niteyahimage" />
 
-    <Button
-        android:id="@+id/btnhBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Back"
-        tools:layout_editor_absoluteX="391dp"
-        tools:layout_editor_absoluteY="275dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
