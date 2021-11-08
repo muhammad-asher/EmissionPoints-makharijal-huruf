@@ -77,7 +77,7 @@
         android:layout_marginStart="36dp"
         android:layout_marginEnd="36dp"
         android:layout_marginBottom="17dp"
-        android:text="Total Commits : 4"
+        android:text="Total Commits : 9"
         android:textAlignment="center"
         android:textSize="22sp"
         android:textStyle="bold"

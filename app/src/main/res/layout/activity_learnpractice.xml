@@ -32,80 +32,80 @@
         android:text="Makhraj is one of the Basis of Tajweed . There are 17 emission points (makhārij al-ḥurūf), located in various regions of: 1 – Throat 2 – Tongue 3 – Lips 4 – Nose 5 – Mouth "
         android:textAlignment="textStart"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/button"
+        app:layout_constraintBottom_toBottomOf="@+id/btnHalqiyah"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnHalqiyah"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="9dp"
         android:backgroundTint="#9E1C8D73"
         android:text="Halqiyah"
-        app:layout_constraintBaseline_toBaselineOf="@+id/button2"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnLahatiyah"
+        app:layout_constraintEnd_toStartOf="@+id/btnLahatiyah"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnLahatiyah"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="2dp"
         android:layout_marginBottom="24dp"
         android:backgroundTint="#9E1C8D73"
         android:text="Lahatiyah"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
-        app:layout_constraintEnd_toStartOf="@+id/button4"
-        app:layout_constraintStart_toEndOf="@+id/button" />
+        app:layout_constraintBottom_toTopOf="@+id/btnShajariyahHaafiyah"
+        app:layout_constraintEnd_toStartOf="@+id/btnTarfiyah"
+        app:layout_constraintStart_toEndOf="@+id/btnHalqiyah" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnShajariyahHaafiyah"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="248dp"
         android:backgroundTint="#9E1C8D73"
         android:text="Shajariyah-Haafiyah"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/button"
-        app:layout_constraintStart_toEndOf="@+id/button" />
+        app:layout_constraintEnd_toEndOf="@+id/btnHalqiyah"
+        app:layout_constraintStart_toEndOf="@+id/btnHalqiyah" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btnTarfiyah"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"
         android:backgroundTint="#9E1C8D73"
         android:text="Tarfiyah"
-        app:layout_constraintBaseline_toBaselineOf="@+id/button2"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnLahatiyah"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button2" />
+        app:layout_constraintStart_toEndOf="@+id/btnLahatiyah" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/btnNiteeyah"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginEnd="146dp"
         android:backgroundTint="#9E1C8D73"
         android:text="Nit-eeyah"
-        app:layout_constraintBottom_toBottomOf="@+id/button8"
-        app:layout_constraintEnd_toStartOf="@+id/button8"
+        app:layout_constraintBottom_toBottomOf="@+id/btnGhunna"
+        app:layout_constraintEnd_toStartOf="@+id/btnGhunna"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/button8" />
+        app:layout_constraintTop_toTopOf="@+id/btnGhunna" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/btnLisaveyah"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:backgroundTint="#9E1C8D73"
         android:text="Lisaveyah"
-        app:layout_constraintEnd_toEndOf="@+id/button4"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        app:layout_constraintEnd_toEndOf="@+id/btnTarfiyah"
+        app:layout_constraintTop_toBottomOf="@+id/btnTarfiyah" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/btnGhunna"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="29dp"
@@ -113,8 +113,8 @@
         android:backgroundTint="#9E1C8D73"
         android:text="Ghunna"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button5"
-        app:layout_constraintTop_toBottomOf="@+id/button6" />
+        app:layout_constraintStart_toEndOf="@+id/btnNiteeyah"
+        app:layout_constraintTop_toBottomOf="@+id/btnLisaveyah" />
 
     <Button
         android:id="@+id/btnback"

@@ -10,6 +10,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Task3EmissionPoints">
         <activity
+            android:name=".GhunnaActivity"
+            android:exported="true" />
+        <activity
+            android:name=".NiteeyahActivity"
+            android:exported="true" />
+        <activity
+            android:name=".LisaveyahActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ShajariyahHaafiyahActivity"
+            android:exported="true" />
+        <activity
+            android:name=".TarfiyahActivity"
+            android:exported="true" />
+        <activity
+            android:name=".LahatiyahActivity"
+            android:exported="true" />
+        <activity
+            android:name=".HalqiyahActivity"
+            android:exported="true" />
+        <activity
             android:name=".MainAppActivity"
             android:exported="true" />
         <activity
