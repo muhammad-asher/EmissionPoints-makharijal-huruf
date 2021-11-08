@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Task3EmissionPoints">
         <activity
+            android:name=".MainAppActivity"
+            android:exported="true" />
+        <activity
+            android:name=".LearnPracticeActivity"
+            android:exported="true" />
+        <activity
             android:name=".ProfileActivity"
             android:exported="true" />
         <activity
