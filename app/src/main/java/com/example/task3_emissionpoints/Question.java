@@ -2,21 +2,27 @@ package com.example.task3_emissionpoints;
 
 public class Question {
     public String questions[] = {
-            "Which is a Programming Language?",
-            "In COMAL language program, after name of procedure parameters must be in?",
-            "Programming language COBOL works best for use in?"
+            "How many Makhārij (مخارج Emission) points are require to correctly read Quran?",
+            "How many alphabets are in Arabic?",
+            "Which is a small diagonal line placed above a letter?",
+            "جہاں کہیں مخراج ادا کیا جاتا ہے، وہ جگا ___________ کہلائی جاتی ہے؟",
+            "ق کی اداگی کے لیے زبان کی جار کو ٹالو کے _______ ہسائے فی لگاتے ہیں۔"
     };
 
     public String choices[][] = {
-            {"HTML", "CSS", "Vala", "PHP"},
-            {"Punction Marks", "Back-Slash", "Brackets", "Semi Colon"},
-            {"Siemens Applications", "Student Applications", "Social Applications", "Commercial Applications"}
+            {"21", "19", "17", "25"},
+            {"29", "30", "35", "56"},
+            {"فَتْحَة", "ضَمَّة", "كَسْرَة", "كَسْة"},
+            {"مخراج","ترتیل","تجوید","حروف"},
+            {"نرم طرف","مشکل حصے پر","سب سے آگے","کہیں نہیں لگتے"}
     };
 
     public String correctAnswer[] = {
-            "PHP",
-            "Brackets",
-            "Commercial Applications"
+            "17",
+            "29",
+            "فَتْحَة",
+            "مخراج",
+            "نرم طرف",
     };
 
     public String getQuestion(int a){

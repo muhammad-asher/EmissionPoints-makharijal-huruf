@@ -16,7 +16,7 @@ public class QuizExamActivity extends AppCompatActivity implements View.OnClickL
 {
 
     Button btn_one, btn_two, btn_three, btn_four;
-    TextView tv_question;
+    TextView questionview;
 
     private Question question = new Question();
 
@@ -42,10 +42,9 @@ public class QuizExamActivity extends AppCompatActivity implements View.OnClickL
         btn_four = (Button)findViewById(R.id.btn_four);
         btn_four.setOnClickListener(this);
 
-        tv_question = (TextView)findViewById(R.id.tv_question);
+        questionview = (TextView)findViewById(R.id.quizquestion);
 
         NextQuestion(random.nextInt(questionLength));
-
     }
 
     @Override
@@ -56,7 +55,7 @@ public class QuizExamActivity extends AppCompatActivity implements View.OnClickL
                     Toast.makeText(QuizExamActivity.this, "You Are Correct", Toast.LENGTH_SHORT).show();
                     NextQuestion(random.nextInt(questionLength));
                 }else{
-                    GameOver();
+                    Incorrectoption();
                 }
 
                 break;
@@ -66,7 +65,7 @@ public class QuizExamActivity extends AppCompatActivity implements View.OnClickL
                     Toast.makeText(QuizExamActivity.this, "You Are Correct", Toast.LENGTH_SHORT).show();
                     NextQuestion(random.nextInt(questionLength));
                 }else{
-                    GameOver();
+                    Incorrectoption();
                 }
 
                 break;
@@ -76,7 +75,7 @@ public class QuizExamActivity extends AppCompatActivity implements View.OnClickL
                     Toast.makeText(QuizExamActivity.this, "You Are Correct", Toast.LENGTH_SHORT).show();
                     NextQuestion(random.nextInt(questionLength));
                 }else{
-                    GameOver();
+                    Incorrectoption();
                 }
 
                 break;
@@ -86,28 +85,28 @@ public class QuizExamActivity extends AppCompatActivity implements View.OnClickL
                     Toast.makeText(QuizExamActivity.this, "You Are Correct", Toast.LENGTH_SHORT).show();
                     NextQuestion(random.nextInt(questionLength));
                 }else{
-                    GameOver();
+                    Incorrectoption();
                 }
 
                 break;
         }
     }
 
-    private void GameOver(){
+    private void Incorrectoption(){
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(QuizExamActivity.this);
         alertDialogBuilder
-                .setMessage("Game Over")
+                .setMessage("You are Incorrect")
                 .setCancelable(false)
-                .setPositiveButton("New Game", new DialogInterface.OnClickListener() {
+                .setPositiveButton("Continue The Quiz", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         startActivity(new Intent(getApplicationContext(), QuizExamActivity.class));
                     }
                 })
-                .setNegativeButton("Exit", new DialogInterface.OnClickListener() {
+                .setNegativeButton("Go to Main Screen", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        System.exit(0);
+                        startActivity(new Intent(getApplicationContext(), MainAppActivity.class));
                     }
                 });
         alertDialogBuilder.show();
@@ -115,7 +114,7 @@ public class QuizExamActivity extends AppCompatActivity implements View.OnClickL
     }
 
     private void NextQuestion(int num){
-        tv_question.setText(question.getQuestion(num));
+        questionview.setText(question.getQuestion(num));
         btn_one.setText(question.getchoice1(num));
         btn_two.setText(question.getchoice2(num));
         btn_three.setText(question.getchoice3(num));
