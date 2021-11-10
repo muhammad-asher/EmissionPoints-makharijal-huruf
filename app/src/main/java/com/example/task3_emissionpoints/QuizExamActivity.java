@@ -24,6 +24,7 @@ public class QuizExamActivity extends AppCompatActivity implements View.OnClickL
     private int questionLength = question.questions.length;
 
     Random random;
+    int score=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,8 +54,10 @@ public class QuizExamActivity extends AppCompatActivity implements View.OnClickL
             case R.id.btn_one:
                 if(btn_one.getText() == answer){
                     Toast.makeText(QuizExamActivity.this, "You Are Correct", Toast.LENGTH_SHORT).show();
+                    score++;
                     NextQuestion(random.nextInt(questionLength));
                 }else{
+                    score--;
                     Incorrectoption();
                 }
 
@@ -63,8 +66,11 @@ public class QuizExamActivity extends AppCompatActivity implements View.OnClickL
             case R.id.btn_two:
                 if(btn_two.getText() == answer){
                     Toast.makeText(QuizExamActivity.this, "You Are Correct", Toast.LENGTH_SHORT).show();
+                    score++;
                     NextQuestion(random.nextInt(questionLength));
+
                 }else{
+                    score--;
                     Incorrectoption();
                 }
 
@@ -73,8 +79,10 @@ public class QuizExamActivity extends AppCompatActivity implements View.OnClickL
             case R.id.btn_three:
                 if(btn_three.getText() == answer){
                     Toast.makeText(QuizExamActivity.this, "You Are Correct", Toast.LENGTH_SHORT).show();
+                    score++;
                     NextQuestion(random.nextInt(questionLength));
                 }else{
+                    score--;
                     Incorrectoption();
                 }
 
@@ -83,24 +91,33 @@ public class QuizExamActivity extends AppCompatActivity implements View.OnClickL
             case R.id.btn_four:
                 if(btn_four.getText() == answer){
                     Toast.makeText(QuizExamActivity.this, "You Are Correct", Toast.LENGTH_SHORT).show();
+                    score++;
                     NextQuestion(random.nextInt(questionLength));
                 }else{
+                    score--;
                     Incorrectoption();
+
                 }
 
                 break;
+
+
         }
+
     }
 
     private void Incorrectoption(){
+        Toast.makeText(QuizExamActivity.this, "You Are InCorrect", Toast.LENGTH_SHORT).show();
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(QuizExamActivity.this);
         alertDialogBuilder
                 .setMessage("You are Incorrect")
-                .setCancelable(false)
+                .setCancelable(true)
                 .setPositiveButton("Continue The Quiz", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         startActivity(new Intent(getApplicationContext(), QuizExamActivity.class));
+                        finish();
+
                     }
                 })
                 .setNegativeButton("Go to Main Screen", new DialogInterface.OnClickListener() {

@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Task3EmissionPoints">
         <activity
+            android:name=".LearnScreensActivity"
+            android:exported="true" />
+        <activity
             android:name=".QuizExamActivity"
             android:exported="true" />
         <activity

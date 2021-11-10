@@ -94,5 +94,43 @@ public class LearnPracticeActivity extends AppCompatActivity {
             }
         });
     }
+/**    public void click(View v)
+    {
+        switch (v.getId())
+        {
+            case R.id.btnHalqiyah:
+                Intent obj=new Intent(LearnPracticeActivity.this, LearnScreensActivity.class);
+                obj.putExtra("value", "Halqiyah");
+                obj.putExtra("value1","p1");
+                startActivity(obj);
+                break;
 
+            case R.id.btnLahatiyah:
+                Intent obj1=new Intent(LearnPracticeActivity.this, LearnScreensActivity.class);
+                obj1.putExtra("value", "Lahatiyah");
+                obj1.putExtra("value1","p2");
+                startActivity(obj1);
+                break;
+
+            case R.id.btnShajariyahHaafiyah:
+                Intent obj2=new Intent(LearnPracticeActivity.this, LearnScreensActivity.class);
+                obj2.putExtra("value", "Shajariyah-Haafiyah");
+                obj2.putExtra("value1","p3");
+                startActivity(obj2);
+                break;
+
+            case R.id.btnTarfiyah:
+                Intent obj3=new Intent(LearnPracticeActivity.this, LearnScreensActivity.class);
+                obj3.putExtra("value", "Tarfiyah");
+                obj3.putExtra("value1","p4");
+                startActivity(obj3);
+                break;
+
+            case R.id.btnNiteeyah:
+                Intent obj4=new Intent(LearnPracticeActivity.this, LearnScreensActivity.class);
+                obj4.putExtra("value", "Nit-eeyah");
+                obj4.putExtra("value1","p5");
+                startActivity(obj4);
+                break;
+*/
 }

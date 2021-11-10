@@ -25,48 +25,46 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="17dp"
-        android:layout_marginTop="22dp"
+        android:layout_marginBottom="19dp"
         android:text="مخرج الحروف "
         android:textAlignment="inherit"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Knowing Makharij Al-Huruf is an important matter for anyone studying Tajweed, because Makharij Al-Huruf are the right exits of each letter, so it helps in pronouncing the words in the right way.There are 17 emission points (makhārij al-ḥurūf), located in various regions of:  1 – Throat  2 – Tongue  3 – Lips  4 – Nose  5 – Mouth"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/imageView22"
+        app:layout_constraintStart_toStartOf="@+id/textView6" />
 
     <Button
         android:id="@+id/btnPractice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="124dp"
+        android:layout_marginTop="13dp"
         android:backgroundTint="#9E1C8D73"
         android:text="Practice"
         android:textSize="22sp"
-        app:layout_constraintBottom_toBottomOf="@+id/btnExam"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btnExam" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView22" />
 
     <Button
         android:id="@+id/btnExam"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="13dp"
         android:layout_marginEnd="186dp"
         android:backgroundTint="#9E1C8D73"
         android:text="Quiz Exam"
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView22" />
+
+    <ImageView
+        android:id="@+id/imageView22"
+        android:layout_width="0dp"
+        android:layout_height="151dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/makharijimage" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

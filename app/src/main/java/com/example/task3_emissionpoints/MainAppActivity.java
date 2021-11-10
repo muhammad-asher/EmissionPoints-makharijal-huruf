@@ -25,6 +25,7 @@ public class MainAppActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent =new Intent(MainAppActivity.this, LearnPracticeActivity.class);
                 startActivity(intent);
+
             }
 
         });
