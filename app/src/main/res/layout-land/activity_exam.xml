@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_200"
+    android:backgroundTint="#1162FF00"
+    tools:context=".ExamActivity">
+
+    <TextView
+        android:id="@+id/qid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="73dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/heading"
+        app:layout_constraintTop_toBottomOf="@+id/heading" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="0dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="61dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="60dp"
+        android:background="#00000000"
+        android:backgroundTint="#00000000"
+        app:layout_constraintBottom_toBottomOf="@+id/nextButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/qid">
+
+        <RadioButton
+            android:id="@+id/op1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#758283"
+            android:backgroundTint="#54758283"
+            android:onClick="onRadioButtonClicked"
+            android:text="RadioButton 1"
+            android:textAlignment="center"
+            android:textSize="17sp" />
+
+        <RadioButton
+            android:id="@+id/op2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#758283"
+            android:backgroundTint="#54758283"
+            android:onClick="onRadioButtonClicked"
+            android:text="RadioButton 2"
+            android:textAlignment="center"
+            android:textSize="17sp" />
+
+        <RadioButton
+            android:id="@+id/op3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#758283"
+            android:backgroundTint="#54758283"
+            android:onClick="onRadioButtonClicked"
+            android:text="RadioButton 3"
+            android:textAlignment="center"
+            android:textSize="17sp" />
+
+        <RadioButton
+            android:id="@+id/op4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#758283"
+            android:backgroundTint="#54758283"
+            android:onClick="onRadioButtonClicked"
+            android:text="RadioButton 4"
+            android:textAlignment="center"
+            android:textSize="17sp" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#9E1C8D73"
+        android:text="Makaharijal Huruf Quiz"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#9E1C8D73"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="57dp"
+        android:layout_marginBottom="34dp"
+        android:onClick="nextQuestion"
+        android:text="Next"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:backgroundTint="#9E1C8D73"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/quitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="90dp"
+        android:onClick="quitButton"
+        android:text="Quit"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:backgroundTint="#9E1C8D73"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+</androidx.constraintlayout.widget.ConstraintLayout>
