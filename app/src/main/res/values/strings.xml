@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Task3-EmissionPoints</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_favorite">.</string>
 
 
 </resources>

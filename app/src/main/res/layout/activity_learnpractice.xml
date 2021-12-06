@@ -8,20 +8,35 @@
     android:backgroundTint="#FFFFFF"
     tools:context=".LearnPracticeActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:background="@color/brown"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="ToolBar"
+        app:titleTextColor="#0629EF" />
+
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="103dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="126dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginBottom="46dp"
         android:text="Makharijul Huruf"
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintStart_toStartOf="@+id/toolbar" />
 
     <TextView
         android:id="@+id/textView7"
@@ -40,10 +55,11 @@
         android:id="@+id/btnHalqiyah"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="9dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="320dp"
         android:backgroundTint="#9E1C8D73"
         android:text="Halqiyah"
-        app:layout_constraintBaseline_toBaselineOf="@+id/btnLahatiyah"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnLahatiyah"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -51,7 +67,7 @@
         android:id="@+id/btnLahatiyah"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="2dp"
+        android:layout_marginEnd="1dp"
         android:layout_marginBottom="24dp"
         android:backgroundTint="#9E1C8D73"
         android:text="Lahatiyah"
@@ -63,12 +79,12 @@
         android:id="@+id/btnShajariyahHaafiyah"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="248dp"
+        android:layout_marginTop="24dp"
         android:backgroundTint="#9E1C8D73"
         android:text="Shajariyah-Haafiyah"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/btnHalqiyah"
-        app:layout_constraintStart_toEndOf="@+id/btnHalqiyah" />
+        app:layout_constraintStart_toEndOf="@+id/btnHalqiyah"
+        app:layout_constraintTop_toBottomOf="@+id/btnHalqiyah" />
 
     <Button
         android:id="@+id/btnTarfiyah"
@@ -85,35 +101,33 @@
         android:id="@+id/btnNiteeyah"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginEnd="146dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="29dp"
         android:backgroundTint="#9E1C8D73"
         android:text="Nit-eeyah"
-        app:layout_constraintBottom_toBottomOf="@+id/btnGhunna"
-        app:layout_constraintEnd_toStartOf="@+id/btnGhunna"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btnGhunna" />
+        app:layout_constraintTop_toBottomOf="@+id/btnShajariyahHaafiyah" />
 
     <Button
         android:id="@+id/btnLisaveyah"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:layout_marginEnd="37dp"
         android:backgroundTint="#9E1C8D73"
         android:text="Lisaveyah"
-        app:layout_constraintEnd_toEndOf="@+id/btnTarfiyah"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnTarfiyah" />
 
     <Button
         android:id="@+id/btnGhunna"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
         android:layout_marginTop="29dp"
-        android:layout_marginEnd="36dp"
         android:backgroundTint="#9E1C8D73"
         android:text="Ghunna"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnNiteeyah"
+        app:layout_constraintStart_toStartOf="@+id/btnLisaveyah"
         app:layout_constraintTop_toBottomOf="@+id/btnLisaveyah" />
 
     <Button

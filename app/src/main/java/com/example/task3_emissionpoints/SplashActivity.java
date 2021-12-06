@@ -1,12 +1,10 @@
 package com.example.task3_emissionpoints;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.widget.ImageView;
-import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 
 public class SplashActivity extends AppCompatActivity {
