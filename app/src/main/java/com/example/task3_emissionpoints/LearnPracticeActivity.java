@@ -2,11 +2,16 @@ package com.example.task3_emissionpoints;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
 
 public class LearnPracticeActivity extends AppCompatActivity {
 
@@ -15,8 +20,11 @@ public class LearnPracticeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(myToolbar);
+
+
+
 
 
         setContentView(R.layout.activity_learnpractice);
@@ -98,7 +106,40 @@ public class LearnPracticeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
     }
+
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.epmenu, menu);
+        return true;
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+                Toast.makeText(getApplicationContext(),"Settings Clicked",Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.action_Refresh:
+                Intent intent=new Intent(this,LearnPracticeActivity.class);
+                return true;
+            case R.id.action_notification:
+                Toast.makeText(getApplicationContext(),"Notification Clicked",Toast.LENGTH_SHORT).show();
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+
+
 /**    public void click(View v)
     {
         switch (v.getId())

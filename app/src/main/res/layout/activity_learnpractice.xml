@@ -8,46 +8,45 @@
     android:backgroundTint="#FFFFFF"
     tools:context=".LearnPracticeActivity">
 
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="35dp"
         android:background="@color/brown"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="ToolBar"
+        app:layout_constraintVertical_bias="0.0"
+        app:title="@string/app_name"
         app:titleTextColor="#0629EF" />
-
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="104dp"
-        android:layout_marginBottom="46dp"
+        android:layout_marginBottom="36dp"
         android:text="Makharijul Huruf"
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView7"
-        app:layout_constraintStart_toStartOf="@+id/toolbar" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="166dp"
-        android:layout_marginBottom="167dp"
-        android:text="Makhraj is one of the Basis of Tajweed . There are 17 emission points (makhārij al-ḥurūf), located in various regions of: 1 – Throat 2 – Tongue 3 – Lips 4 – Nose 5 – Mouth "
+        android:layout_marginTop="183dp"
+        android:text="There are 17 emission points (makhārij al-ḥurūf), located in various regions of: 1 – Throat 2 – Tongue 3 – Lips 4 – Nose 5 – Mouth "
         android:textAlignment="textStart"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/btnHalqiyah"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -55,13 +54,15 @@
         android:id="@+id/btnHalqiyah"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="216dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginBottom="320dp"
+        android:layout_marginBottom="215dp"
         android:backgroundTint="#9E1C8D73"
         android:text="Halqiyah"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnback"
         app:layout_constraintEnd_toStartOf="@+id/btnLahatiyah"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <Button
         android:id="@+id/btnLahatiyah"
@@ -113,7 +114,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="37dp"
+        android:layout_marginEnd="36dp"
         android:backgroundTint="#9E1C8D73"
         android:text="Lisaveyah"
         app:layout_constraintEnd_toEndOf="parent"
@@ -123,18 +124,18 @@
         android:id="@+id/btnGhunna"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
         android:layout_marginTop="29dp"
+        android:layout_marginEnd="41dp"
         android:backgroundTint="#9E1C8D73"
         android:text="Ghunna"
-        app:layout_constraintStart_toStartOf="@+id/btnLisaveyah"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnLisaveyah" />
 
     <Button
         android:id="@+id/btnback"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="57dp"
         android:text="Back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
