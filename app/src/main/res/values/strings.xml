@@ -3,6 +3,7 @@
     <string name="action_settings">Settings</string>
     <string name="action_notification">Notifications</string>
     <string name="action_Refresh">Refresh</string>
+    <string name="action_close">Exit</string>
 
 
 </resources>

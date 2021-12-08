@@ -1,13 +1,20 @@
 package com.example.task3_emissionpoints;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import java.util.Random;
 
@@ -33,11 +40,18 @@ public class ExamActivity extends AppCompatActivity {
             "أ ہ","ع ح","ن","غ خ","ق","ک","ج ش ی","غ خ","ض","ل","ر","ت د ط","ظ  ذ  ث","ص ز س"
     };
 
+    Toolbar toolbar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exam);
+        toolbar=findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        ActionBar actionBar=getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
+
         randomQuestions();
         count++;
     }
@@ -147,4 +161,26 @@ public class ExamActivity extends AppCompatActivity {
                 break;
         }
     }
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater=getMenuInflater();
+        inflater.inflate(R.menu.epmenu,menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id=item.getItemId();
+        if (id==R.id.action_Refresh){
+            finish();
+            startActivity(getIntent());
+        } else if(id==R.id.action_settings){
+            Toast.makeText(this, "Setting clicked", Toast.LENGTH_SHORT).show();
+        }else if(id==R.id.action_notification){
+            Toast.makeText(this, "Notification clicked", Toast.LENGTH_SHORT).show();
+        } else if (id==R.id.action_exit){
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+
 }

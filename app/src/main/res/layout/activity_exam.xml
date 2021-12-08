@@ -8,17 +8,32 @@
     android:backgroundTint="#1162FF00"
     tools:context=".ExamActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:background="@color/yellow"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/white" />
+
+
     <TextView
         android:id="@+id/qid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="41dp"
-        android:layout_marginBottom="70dp"
+        android:layout_marginTop="33dp"
         android:text="TextView"
         android:textAlignment="center"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/heading" />
@@ -26,15 +41,17 @@
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="0dp"
-        android:layout_height="345dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="157dp"
-        android:layout_marginEnd="5dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="71dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="75dp"
         android:background="#00000000"
         android:backgroundTint="#00000000"
+        app:layout_constraintBottom_toTopOf="@+id/nextButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="@+id/qid">
 
         <RadioButton
             android:id="@+id/op1"
@@ -85,23 +102,23 @@
         android:id="@+id/nextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="53dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="49dp"
         android:onClick="nextQuestion"
         android:text="Next"
         android:textAlignment="center"
         android:textSize="20sp"
         app:backgroundTint="#9E1C8D73"
         app:cornerRadius="10dp"
-        app:layout_constraintBottom_toBottomOf="@+id/quitButton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/quitButton" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/quitButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="66dp"
-        android:layout_marginBottom="98dp"
+        android:layout_marginEnd="71dp"
+        android:layout_marginBottom="49dp"
         android:onClick="quitButton"
         android:text="Quit"
         android:textAlignment="center"
@@ -116,7 +133,7 @@
         android:id="@+id/heading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="31dp"
         android:backgroundTint="#9E1C8D73"
         android:text="Makaharijal Huruf Quiz"
         android:textAlignment="center"
@@ -126,5 +143,5 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 </androidx.constraintlayout.widget.ConstraintLayout>
