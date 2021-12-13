@@ -10,12 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Task3EmissionPoints">
         <activity
+            android:name=".NavigationDrawer"
+            android:exported="true" />
+        <activity
             android:name=".finalScore"
             android:exported="true" />
         <activity
             android:name=".ExamActivity"
             android:exported="true"
-            android:parentActivityName=".LearnPracticeActivity"/>
+            android:parentActivityName=".LearnPracticeActivity" />
         <activity
             android:name=".LearnScreensActivity"
             android:exported="true" />
@@ -46,7 +49,7 @@
         <activity
             android:name=".LearnPracticeActivity"
             android:exported="true"
-            android:parentActivityName=".ExamActivity"/>
+            android:parentActivityName=".ExamActivity" />
         <activity
             android:name=".ProfileActivity"
             android:exported="true" />

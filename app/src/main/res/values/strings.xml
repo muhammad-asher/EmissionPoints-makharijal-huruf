@@ -5,5 +5,8 @@
     <string name="action_Refresh">Refresh</string>
     <string name="action_close">Exit</string>
 
+    <string name="open">Openning</string>
+    <string name="close">Closing</string>
+
 
 </resources>
